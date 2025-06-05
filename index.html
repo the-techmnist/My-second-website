@@ -1,61 +1,77 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Jennifer's Portfolio</title>
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="index.css"/>
+  <script defer src="index.js"></script>
 </head>
 <body>
-  <header class="hero">
-    <nav class="navbar">
-      <h1 class="logo">The Techminist</h1>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+  <header>
+    <h1>Hello, I'm <span class="highlight">Jennifer</span></h1>
+    <p>A Creative Tech Enthusiast | Radiographer | Brand Strategist</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#work">Work</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#blog">Blog</a>
+      <a href="#contact">Contact</a>
     </nav>
-    <div class="hero-text">
-      <h2>Hi, I'm Jennifer 👋</h2>
-      <p>A Radiographer | Creative Techie | Brand Strategist</p>
-    </div>
   </header>
 
-  <section id="about" class="section about">
+  <section id="about">
     <h2>About Me</h2>
-    <p>I’m Jennifer, a passionate creative techie who balances radiography with brand design, social media strategy, and digital skills. Welcome to my space!</p>
+    <p>I'm passionate about tech, design, and making a digital impact. From managing brands to editing videos, my mission is to blend tech and creativity seamlessly.</p>
+    <img src="https://source.unsplash.com/featured/?technology,woman" alt="Jennifer" class="hero-img">
   </section>
 
-  <section id="projects" class="section projects">
-    <h2>My Projects</h2>
-    <div class="project-grid">
-      <div class="project-card">
-        <h3>Brandiverse</h3>
-        <p>Social media & content creation for growing brands</p>
-      </div>
-      <div class="project-card">
-        <h3>Duby's Aesthetics</h3>
-        <p>Beauty business management and branding</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact" class="section contact">
-    <h2>Contact Me</h2>
-    <form action="https://formspree.io/f/your-id" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="_replyto" placeholder="Your Email" required />
-      <textarea name="message" placeholder="Your Message"></textarea>
-      <button type="submit">Send</button>
+  <section id="work">
+    <h2>My Work & Experience</h2>
+    <div id="projects"></div>
+    <form id="uploadForm">
+      <label>Upload Your Project (image/pdf):</label>
+      <input type="file" id="fileInput" accept="image/*,.pdf">
+      <button type="submit">Add to Portfolio</button>
     </form>
   </section>
 
-  <footer class="footer">
-    <p>&copy; 2025 Ihezie Jennifer | All rights reserved.</p>
-  </footer>
+  <section id="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery">
+      <img src="https://source.unsplash.com/300x200/?creativity" />
+      <img src="https://source.unsplash.com/300x200/?coding" />
+      <img src="https://source.unsplash.com/300x200/?design" />
+      <img src="https://source.unsplash.com/300x200/?inspiration" />
+    </div>
+  </section>
 
-  <script src="assets/js/script.js"></script>
+  <section id="blog">
+    <h2>Blog</h2>
+    <div class="blog-posts">
+      <article>
+        <h3>How I Combine Radiography & Tech</h3>
+        <p>I explore how I balance my career in medical radiography with a strong passion for tech. Read on to see how I merge these worlds and make impact!</p>
+      </article>
+      <article>
+        <h3>Top Tools for Social Media Management</h3>
+        <p>Discover my go-to tools and tricks for managing multiple social media accounts for brands and influencers with ease.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form action="/submit-form" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message"></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Jennifer | Brandiverse & The Techminist</p>
+  </footer>
 </body>
 </html>
